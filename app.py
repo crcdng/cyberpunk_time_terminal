@@ -66,4 +66,6 @@ agent = CodeAgent(
 )
 
 
-GradioUI(agent).launch()
+GradioUI(agent, 
+         title="Agent Experiments",
+).launch()
