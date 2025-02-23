@@ -65,6 +65,4 @@ agent = CodeAgent(
     prompt_templates=prompt_templates
 )
 
-print(smolagents.default_tools)
-
 GradioUI(agent).launch()
