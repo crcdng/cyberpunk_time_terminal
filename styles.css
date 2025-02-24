@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Cyberpunk";
+  src: url("/file=Cyberpunk.otf") format("otf");
+  font-weight: Regular;
+  font-style: normal;
+}
+
+h1 {
+    font-family: "Cyberpunk";
+    font-size: 24px;
+    font-style: normal;
+  }
