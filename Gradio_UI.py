@@ -269,7 +269,7 @@ class GradioUI:
                 type="messages",
                 avatar_images=(
                     None,
-                    "https://huggingface.co/spaces/crcdng/First_agent_template/blob/main/agent.jpg",
+                    "https://huggingface.co/spaces/crcdng/First_agent_template/resolve/main/agent.jpg",
                 ),
                 resizeable=True,
                 scale=0.05,
