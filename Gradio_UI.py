@@ -261,7 +261,7 @@ class GradioUI:
     def launch(self, **kwargs):
         import gradio as gr
 
-        with gr.Blocks(fill_height=True) as demo:
+        with gr.Blocks(fill_height=True, theme='crcdng/cyber') as demo:
             stored_messages = gr.State([])
             file_uploads_log = gr.State([])
             chatbot = gr.Chatbot(
