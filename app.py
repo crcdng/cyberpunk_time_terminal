@@ -7,7 +7,6 @@ from tools.final_answer import FinalAnswerTool
 
 from Gradio_UI import GradioUI
 
-
 # Below is an example of a tool that does nothing. Amaze us with your creativity !
 @tool
 def my_custom_tool(arg1:str, arg2:int)-> str: #it's import to specify the return type
