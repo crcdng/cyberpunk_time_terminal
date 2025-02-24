@@ -289,7 +289,10 @@ class GradioUI:
                 [text_input, file_uploads_log],
                 [stored_messages, text_input],
             ).then(self.interact_with_agent, [stored_messages, chatbot], [chatbot])
-
+            examples = gr.Examples(
+                examples=[["Tell me a joke with the current local time"],],
+            inputs=[text_input],
+            )
         demo.launch(debug=True, share=True, **kwargs)
 
 
