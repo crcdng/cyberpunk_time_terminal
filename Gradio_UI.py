@@ -272,7 +272,7 @@ class GradioUI:
                     "https://huggingface.co/spaces/crcdng/First_agent_template/blob/main/agent.jpg",
                 ),
                 resizeable=True,
-                scale=1,
+                scale=0.05,
             )
             # If an upload folder is provided, enable the upload feature
             if self.file_upload_folder is not None:
