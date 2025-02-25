@@ -15,6 +15,7 @@ tags:
 - agent-course
 ---
 
-derived from: First Agent Template
-
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+# Your Cyberpunk Local Time Terminal
+ 
+derived from: First Agent Template    
+uses the [cyber theme](https://huggingface.co/spaces/crcdng/cyber)

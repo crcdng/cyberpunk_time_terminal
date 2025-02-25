@@ -297,11 +297,11 @@ class GradioUI:
             label="Agent",
             type="messages",
             avatar_images=(
-                None,
-                "https://huggingface.co/spaces/crcdng/First_agent_template/resolve/main/agent.jpg",
+                "https://huggingface.co/spaces/crcdng/First_agent_template/resolve/main/agent_a.jpg",
+                "https://huggingface.co/spaces/crcdng/First_agent_template/resolve/main/agent_b.jpg",
             ),
             resizeable=True,
-            scale=0.05,
+            scale=2,
             )
             # If an upload folder is provided, enable the upload feature
             if self.file_upload_folder is not None:
