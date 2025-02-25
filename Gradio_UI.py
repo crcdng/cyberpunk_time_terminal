@@ -297,8 +297,8 @@ class GradioUI:
             label="Agent",
             type="messages",
             avatar_images=(
-                "https://huggingface.co/spaces/crcdng/First_agent_template/resolve/main/agent_a.jpg",
                 "https://huggingface.co/spaces/crcdng/First_agent_template/resolve/main/agent_b.jpg",
+                "https://huggingface.co/spaces/crcdng/First_agent_template/resolve/main/agent_a.jpg",
             ),
             resizeable=True,
             scale=2,
