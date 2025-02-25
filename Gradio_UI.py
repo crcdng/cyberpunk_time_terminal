@@ -261,9 +261,9 @@ class GradioUI:
     def launch(self, **kwargs):
         import gradio as gr
 
-        with gr.Blocks(fill_height=True, theme='crcdng/cyber', css="styles.css") as demo:
+        with gr.Blocks(fill_height=True, theme='crcdng/cyber') as demo:
             
-            title=(
+            title_html=(
                 """
                 <center> 
                 <h1 style='font-family: Cyberpunk; src: url("/gradio_api/file=/Cyberpunk.otf") format("otf"); font-size: 38px;'> Your Cyber Local Time Expert </h1>
@@ -272,7 +272,7 @@ class GradioUI:
             )
 
             with gr.Row():
-                gr.HTML(title) 
+                title=gr.HTML(title_html) 
             stored_messages = gr.State([])
             file_uploads_log = gr.State([])
             chatbot = gr.Chatbot(
