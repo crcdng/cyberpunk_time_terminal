@@ -267,7 +267,7 @@ class GradioUI:
             title_html=(
                 """
                 <center> 
-                <h1 style='font-family: Cyberpunk; src: url("Cyberpunk.otf") format("otf"); font-size: 38px;'> Your Cyber Local Time Expert </h1>
+                <h1 style='font-family: Cyberpunk; src: url("Cyberpunk.otf") format("opentype"); font-size: 38px;'> Your Cyber Local Time Expert </h1>
                 </center>
                 """
             )
