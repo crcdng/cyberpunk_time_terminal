@@ -266,7 +266,7 @@ class GradioUI:
             title=(
                 """
                 <center> 
-                <h1> Your Cyber Local Time Expert </h1>
+                <h1 style='font-family: Cyberpunk; font-size: 38px;'> Your Cyber Local Time Expert </h1>
                 </center>
                 """
             )
