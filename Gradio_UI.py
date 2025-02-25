@@ -261,7 +261,7 @@ class GradioUI:
     def launch(self, **kwargs):
         import gradio as gr
 
-        with gr.Blocks(fill_height=True, theme='crcdng/cyber') as demo:
+        with gr.Blocks(fill_height=True, theme='crcdng/cyber', css="styles.css") as demo:
             title=(
                 """
                 <center> 
@@ -303,7 +303,7 @@ class GradioUI:
                     examples=[["Tell me a joke based on the current local time"],["Given the current local time, what is a fun activity to do?"],["When asked for the current local time, add 6 hours to it. What is the current local time?"]],
                 inputs=[text_input],
                 )
-        demo.launch(debug=True, share=True, allowed_paths="Cyberpunk.otf", css="styles.css", **kwargs)
+        demo.launch(debug=True, share=True, allowed_paths="Cyberpunk.otf", **kwargs)
 
 
 __all__ = ["stream_to_gradio", "GradioUI"]
