@@ -268,7 +268,7 @@ class GradioUI:
                 <style>
                 @font-face { 
                     font-family: Cyberpunk;
-                    src: url("/file=Cyberpunk.otf") format("opentype");
+                    src: url("/gradio_api/file=Cyberpunk.otf") format("opentype");
                     font-weight: Regular;
                     font-style: normal;
                 }
