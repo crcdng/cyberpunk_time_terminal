@@ -1,6 +1,6 @@
 @font-face { 
 font-family: Cyberpunk;
-  src: url("/file=/Cyberpunk.otf") format("otf");
+  src: url("/gradio_api/file=/Cyberpunk.otf") format("otf");
   font-weight: Regular;
   font-style: normal;
 }
