@@ -261,7 +261,6 @@ class GradioUI:
     def launch(self, **kwargs):
         import gradio as gr
 
-        gr.set_static_paths(paths=["/"])
         with gr.Blocks(fill_height=True, theme='crcdng/cyber') as demo:
             
             title_html=(
