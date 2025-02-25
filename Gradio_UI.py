@@ -273,38 +273,37 @@ class GradioUI:
 
             with gr.Row():
                 gr.HTML(title) 
-            with gr.Row():
-                stored_messages = gr.State([])
-                file_uploads_log = gr.State([])
-                chatbot = gr.Chatbot(
-                label="Agent",
-                type="messages",
-                avatar_images=(
-                    None,
-                    "https://huggingface.co/spaces/crcdng/First_agent_template/resolve/main/agent.jpg",
-                ),
-                resizeable=True,
-                scale=0.05,
+            stored_messages = gr.State([])
+            file_uploads_log = gr.State([])
+            chatbot = gr.Chatbot(
+            label="Agent",
+            type="messages",
+            avatar_images=(
+                None,
+                "https://huggingface.co/spaces/crcdng/First_agent_template/resolve/main/agent.jpg",
+            ),
+            resizeable=True,
+            scale=0.05,
+            )
+            # If an upload folder is provided, enable the upload feature
+            if self.file_upload_folder is not None:
+                upload_file = gr.File(label="Upload a file")
+                upload_status = gr.Textbox(label="Upload Status", interactive=False, visible=False)
+                upload_file.change(
+                    self.upload_file,
+                    [upload_file, file_uploads_log],
+                    [upload_status, file_uploads_log],
                 )
-                # If an upload folder is provided, enable the upload feature
-                if self.file_upload_folder is not None:
-                    upload_file = gr.File(label="Upload a file")
-                    upload_status = gr.Textbox(label="Upload Status", interactive=False, visible=False)
-                    upload_file.change(
-                        self.upload_file,
-                        [upload_file, file_uploads_log],
-                        [upload_status, file_uploads_log],
-                    )
-                text_input = gr.Textbox(lines=1, label="Chat Message")
-                text_input.submit(
-                    self.log_user_message,
-                    [text_input, file_uploads_log],
-                    [stored_messages, text_input],
-                ).then(self.interact_with_agent, [stored_messages, chatbot], [chatbot])
-                examples = gr.Examples(
-                    examples=[["Tell me a joke based on the current local time"],["Given the current local time, what is a fun activity to do?"],["When asked for the current local time, add 6 hours to it. What is the current local time?"]],
-                inputs=[text_input],
-                )
+            text_input = gr.Textbox(lines=1, label="Chat Message")
+            text_input.submit(
+                self.log_user_message,
+                [text_input, file_uploads_log],
+                [stored_messages, text_input],
+            ).then(self.interact_with_agent, [stored_messages, chatbot], [chatbot])
+            examples = gr.Examples(
+                examples=[["Tell me a joke based on the current local time"],["Given the current local time, what is a fun activity to do?"],["When asked for the current local time, add 6 hours to it. What is the current local time?"]],
+            inputs=[text_input],
+            )
         demo.launch(debug=True, share=True, allowed_paths=["Cyberpunk.otf"], **kwargs)
 
 
