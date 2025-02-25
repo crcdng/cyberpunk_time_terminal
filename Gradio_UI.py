@@ -274,13 +274,23 @@ class GradioUI:
                 }
                 </style>
                 <center> 
-                <h1 style='font-family: Cyberpunk; font-size: 38px;'> Your Cyberpunk Local Time Expert </h1>
+                <h1 style='font-family: Cyberpunk; font-size: 38px;'> Your Cyberpunk Local Time Terminal </h1>
                 </center>
+                """
+            )
+
+            description_html=(
+                """
+                <center><p> 
+                Welcome to ChronoCore-77, the bleeding-edge time terminal jacked straight into the neon veins of Night City. Whether you’re dodging corpos, chasing edgerunner gigs, or just trying to sync your implant clock, I’ve got the local time locked and loaded. No glitches, no lag—just pure, precise chrono-data ripped straight from the grid. Stay sharp, choom. Time waits for no one.
+                </p></center>
                 """
             )
 
             with gr.Row():
                 title=gr.HTML(title_html) 
+            with gr.Row():
+                title=gr.HTML(description_html)     
             stored_messages = gr.State([])
             file_uploads_log = gr.State([])
             chatbot = gr.Chatbot(

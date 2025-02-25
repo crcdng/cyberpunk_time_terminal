@@ -1,5 +1,5 @@
 ---
-title: Your Cyberpunk Local Time Expert
+title: Your Cyberpunk Local Time Terminal
 emoji: 🤖
 colorFrom: purple
 colorTo: yellow
