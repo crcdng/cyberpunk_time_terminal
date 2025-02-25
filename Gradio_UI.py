@@ -274,7 +274,7 @@ class GradioUI:
                 }
                 </style>
                 <center> 
-                <h1 style='font-family: Cyberpunk; font-size: 38px;'> Your Cyber Local Time Expert </h1>
+                <h1 style='font-family: Cyberpunk; font-size: 38px;'> Your Cyberpunk Local Time Expert </h1>
                 </center>
                 """
             )
@@ -309,7 +309,7 @@ class GradioUI:
                 [stored_messages, text_input],
             ).then(self.interact_with_agent, [stored_messages, chatbot], [chatbot])
             examples = gr.Examples(
-                examples=[["Tell me a joke based on the current local time"],["Given the current local time, what is a fun activity to do?"],["When asked for the current local time, add 6 hours to it. What is the current local time?"]],
+                examples=[["Tell me a joke based on the current local time"],["Given the current local time, what is a fun activity to do?"],["When asked for the current local time, add 6 hours to it. What is the current local time?"], ["Find significant events that happend exactly one year ago"]],
             inputs=[text_input],
             )
         demo.launch(debug=True, share=True, allowed_paths=["Cyberpunk.otf"], **kwargs)

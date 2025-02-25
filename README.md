@@ -1,7 +1,7 @@
 ---
-title: First Agent Template
-emoji: ⚡
-colorFrom: pink
+title: Your Cyberpunk Local Time Expert
+emoji: 🤖
+colorFrom: violet
 colorTo: yellow
 sdk: gradio
 sdk_version: 5.15.0
@@ -14,5 +14,7 @@ tags:
 - tool
 - agent-course
 ---
+
+derived from: First Agent Template
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference

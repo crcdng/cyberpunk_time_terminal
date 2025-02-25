@@ -1,4 +1,4 @@
-from smolagents import CodeAgent,DuckDuckGoSearchTool, HfApiModel,load_tool,tool
+from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel, load_tool, tool
 import datetime
 import requests
 import pytz
@@ -34,11 +34,7 @@ def get_current_time_in_timezone(timezone: str) -> str:
         return f"Error fetching time for timezone '{timezone}': {str(e)}"
 
 
-final_answer = FinalAnswerTool()
-
-
-# If the agent does not answer, the model is overloaded, please use another model or the following Hugging Face Endpoint that also contains qwen2.5 coder:
-# model_id='https://pflgm2locj2t89co.us-east-1.aws.endpoints.huggingface.cloud' 
+final_answer = FinalAnswerTool() 
 
 model = HfApiModel(
 max_tokens=2096,
@@ -46,7 +42,6 @@ temperature=0.5,
 model_id='Qwen/Qwen2.5-Coder-32B-Instruct',# it is possible that this model may be overloaded
 custom_role_conversions=None,
 )
-
 
 # Import tool from Hub
 image_generation_tool = load_tool("agents-course/text-to-image", trust_remote_code=True)
@@ -56,7 +51,7 @@ with open("prompts.yaml", 'r') as stream:
     
 agent = CodeAgent(
     model=model,
-    tools=[final_answer, get_current_time_in_timezone], ## add your tools here (don't remove final answer)
+    tools=[final_answer, get_current_time_in_timezone, DuckDuckGoSearchTool()], ## add your tools here (don't remove final answer)
     max_steps=6,
     verbosity_level=1,
     grammar=None,
