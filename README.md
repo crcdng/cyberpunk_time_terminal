@@ -1,7 +1,7 @@
 ---
 title: Your Cyberpunk Local Time Expert
 emoji: 🤖
-colorFrom: violet
+colorFrom: purple
 colorTo: yellow
 sdk: gradio
 sdk_version: 5.15.0
