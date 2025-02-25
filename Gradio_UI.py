@@ -262,6 +262,7 @@ class GradioUI:
         import gradio as gr
 
         with gr.Blocks(fill_height=True, theme='crcdng/cyber', css="styles.css") as demo:
+            
             title=(
                 """
                 <center> 
@@ -272,6 +273,7 @@ class GradioUI:
 
             with gr.Row():
                 gr.HTML(title) 
+            with gr.Row():
                 stored_messages = gr.State([])
                 file_uploads_log = gr.State([])
                 chatbot = gr.Chatbot(
