@@ -13,6 +13,7 @@ tags:
 - smolagent
 - tool
 - agent-course
+- agents-course
 ---
 
 # Your Cyberpunk Local Time Terminal
