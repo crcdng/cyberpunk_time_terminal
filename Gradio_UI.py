@@ -292,8 +292,7 @@ class GradioUI:
                 time_display = gr.Textbox(label="Time", every=timer)
                 import datetime
                 from zoneinfo import ZoneInfo
-                timer.tick(lambda: round(time.time()), outputs=time_display)
-                # print(datetime.datetime.now(tz=ZoneInfo("Europe/Berlin")))
+                timer.tick(lambda: datetime.datetime.now(tz=ZoneInfo("Europe/Berlin")), outputs=time_display)
             with gr.Row():
                 title=gr.HTML(title_html) 
             with gr.Row():
