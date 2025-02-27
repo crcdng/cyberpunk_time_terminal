@@ -51,4 +51,5 @@ agent = CodeAgent(
 )
 
 print(f"docstring {get_current_time_in_timezone.__doc__}")
+print(f"string {get_current_time_in_timezone}")
 GradioUI(agent).launch()
