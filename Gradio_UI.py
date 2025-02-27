@@ -25,6 +25,7 @@ from smolagents.agents import ActionStep, MultiStepAgent
 from smolagents.memory import MemoryStep
 from smolagents.utils import _is_package_available
 
+from app.py import get_current_time_in_timezone
 
 def pull_messages_from_step(
     step_log: MemoryStep,
@@ -291,9 +292,8 @@ class GradioUI:
             with gr.Row():
                 timer = gr.Timer(1)
                 time_display = gr.Textbox(label="Time", every=timer)
-                import datetime
-                from zoneinfo import ZoneInfo
-                timer.tick(lambda: datetime.datetime.now(tz=ZoneInfo("Europe/Berlin")), outputs=time_display)
+                import time
+                timer.tick(lambda: get_current_time_in_timezone(time.tzname[0]), outputs=time_display)
             with gr.Row():
                 title=gr.HTML(title_html) 
             with gr.Row():
