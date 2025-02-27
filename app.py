@@ -22,7 +22,6 @@ def get_current_time_in_timezone(timezone: str) -> str:
     except Exception as e:
         return f"Error fetching time for timezone '{timezone}': {str(e)}"
 
-
 final_answer = FinalAnswerTool() 
 
 model = HfApiModel(
