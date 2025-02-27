@@ -343,7 +343,7 @@ class GradioUI:
                 examples=[["Tell me a joke based on the current local time"],["Given the current local time, what is a fun activity to do?"],["When asked for the current local time, add 6 hours to it. What is the current local time?"], ["Find significant events that happend exactly one year ago", "Generate a bold picture inspired by the current local time"]],
             inputs=[text_input],
             )
-        demo.launch(debug=True, share=True, allowed_paths=["Cyberpunk.otf"], **kwargs)
+        demo.launch(debug=True, share=True, ssr_mode=False, allowed_paths=["Cyberpunk.otf"], **kwargs)
 
 
 __all__ = ["stream_to_gradio", "GradioUI"]
