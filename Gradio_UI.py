@@ -345,5 +345,4 @@ class GradioUI:
             )
         demo.launch(debug=True, share=True, ssr_mode=False, allowed_paths=["Cyberpunk.otf"], **kwargs)
 
-
 __all__ = ["stream_to_gradio", "GradioUI"]
