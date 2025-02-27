@@ -289,7 +289,7 @@ class GradioUI:
 
             with gr.Row():
                 timer = gr.Timer(1)
-                time_display = gr.Textbox(label="Time")
+                time_display = gr.Textbox(label="Time", every=timer)
                 import datetime
                 from zoneinfo import ZoneInfo
                 timer.tick(lambda: round(time.time()), outputs=time_display)
