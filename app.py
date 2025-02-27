@@ -7,6 +7,7 @@ from tools.final_answer import FinalAnswerTool
 
 from Gradio_UI import GradioUI
 
+
 @tool
 def get_current_time_in_timezone(timezone: str) -> str:
     """A tool that fetches the current local time in a specified timezone.
