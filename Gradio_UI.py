@@ -274,7 +274,13 @@ class GradioUI:
             "",
         )
 
-    def set_agent_steps(self, steps):
+    def agent_get_tools(self):
+        return self.agent.tools
+
+    def agent_reset(self):
+        self.agent
+
+    def agent_set_steps(self, steps):
         self.agent.max_steps = steps
 
     def launch(self, **kwargs):
@@ -337,7 +343,8 @@ class GradioUI:
                     [upload_status, file_uploads_log],
                 )
             with gr.Row():
-                steps_input = gr.Slider(0, 12, value=4, step=1, label="Max. Number of Steps")
+                steps_input = gr.Slider(1, 12, value=4, step=1, label="Max. Number of Steps")
+                gr.Dropdown(choices=agent_get_tools(), label="Tools (display only)")
                 reset = gr.Button(value="Reset Agent")
             text_input = gr.Textbox(lines=1, label="Chat Message")
             text_input.submit(
