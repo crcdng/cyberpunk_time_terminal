@@ -344,7 +344,7 @@ class GradioUI:
                 )
             with gr.Row():
                 steps_input = gr.Slider(1, 12, value=4, step=1, label="Max. Number of Steps")
-                steps_input.change(agent_set_steps, steps, None)
+                steps_input.change(self.agent_set_steps, steps, None)
                 gr.Dropdown(choices=self.agent_get_tools(), label="Tools (display only)")
                 reset = gr.Button(value="Reset Agent")
             text_input = gr.Textbox(lines=1, label="Chat Message")
