@@ -7,7 +7,6 @@ from tools.final_answer import FinalAnswerTool
 
 from Gradio_UI import GradioUI
 
-
 @tool
 def get_current_time_in_timezone(timezone: str) -> str:
     """A tool that fetches the current local time in a specified timezone.
@@ -23,33 +22,36 @@ def get_current_time_in_timezone(timezone: str) -> str:
     except Exception as e:
         return f"Error fetching time for timezone '{timezone}': {str(e)}"
 
-final_answer = FinalAnswerTool() 
+final_answer = FinalAnswerTool()
 
 model = HfApiModel(
-max_tokens=2096,
-temperature=0.5,
-model_id='Qwen/Qwen2.5-Coder-32B-Instruct',# it is possible that this model may be overloaded
-custom_role_conversions=None,
+    max_tokens=2096,
+    temperature=0.5,
+    model_id="Qwen/Qwen2.5-Coder-32B-Instruct",  # it is possible that this model may be overloaded
+    custom_role_conversions=None,
 )
 
 # Import tool from Hub
 image_generation_tool = load_tool("agents-course/text-to-image", trust_remote_code=True)
 
-with open("prompts.yaml", 'r') as stream:
+with open("prompts.yaml", "r") as stream:
     prompt_templates = yaml.safe_load(stream)
-    
+
 agent = CodeAgent(
     model=model,
-    tools=[final_answer, get_current_time_in_timezone, image_generation_tool, DuckDuckGoSearchTool()], ## add your tools here (don't remove final answer)
+    tools=[
+        final_answer,
+        get_current_time_in_timezone,
+        image_generation_tool,
+        DuckDuckGoSearchTool(),
+    ],  ## add your tools here (don't remove final answer)
     max_steps=6,
     verbosity_level=1,
     grammar=None,
     planning_interval=None,
     name=None,
     description=None,
-    prompt_templates=prompt_templates
+    prompt_templates=prompt_templates,
 )
 
-print(f"docstring {get_current_time_in_timezone.__doc__}")
-print(f"string {get_current_time_in_timezone}")
 GradioUI(agent).launch()
