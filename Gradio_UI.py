@@ -278,7 +278,8 @@ class GradioUI:
         return self.agent.tools
 
     def agent_reset(self):
-        self.agent
+        self.agent.memory.reset()
+        self.agent.monitor.reset()
 
     def agent_set_steps(self, steps):
         self.agent.max_steps = steps
@@ -347,6 +348,7 @@ class GradioUI:
                 steps_input.change(self.agent_set_steps, steps_input, None)
                 gr.Dropdown(choices=self.agent_get_tools(), label="Tools (display only)")
                 reset = gr.Button(value="Reset Agent")
+                reset.click(self.agent_reset, None, None)
             text_input = gr.Textbox(lines=1, label="Chat Message")
             text_input.submit(
                 self.log_user_message,
