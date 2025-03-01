@@ -20,3 +20,4 @@ tags:
  
 derived from: First Agent Template    
 uses the [cyber theme](https://huggingface.co/spaces/crcdng/cyber)
+and [cyberpunk.css](https://www.cssscript.com/demo/cyberpunk-2077/) Copyright (c) 2025 github/alddesign (MIT License)
