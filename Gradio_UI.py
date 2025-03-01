@@ -313,6 +313,16 @@ class GradioUI:
                 """
             )
 
+            banner_html=(
+                """
+                <div class="cyber-banner">
+                Banner
+                </div>
+                """
+            )
+
+            with gr.Row():
+                title=gr.HTML(banner_html) 
             with gr.Row():
                 timer = gr.Timer(1)
                 time_display = gr.Textbox(label="Time", elem_classes="cyber-glitch-2",)
