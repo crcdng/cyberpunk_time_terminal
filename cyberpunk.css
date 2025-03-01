@@ -289,8 +289,8 @@ body
 {
     --button-padding-v: 0.6rem;
     --button-padding-h: 1.75rem;
-    --button-font-size: 1.0rem;
-    --button-cutout: 0.77rem;
+    --button-font-size: 1.0rem !important;
+    --button-cutout: 0.77rem !important;
 }
 
 .cyber-button-big
