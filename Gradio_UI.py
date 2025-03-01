@@ -287,7 +287,7 @@ class GradioUI:
     def launch(self, **kwargs):
         import gradio as gr
 
-        with gr.Blocks(fill_height=True, theme='crcdng/cyber', css_paths="cyberpunk.css") as demo:
+        with gr.Blocks(fill_height=True, theme='crcdng/cyber', css_paths="cyberpunk.css, scrolling_text.css") as demo:
             
             title_html=(
                 """
@@ -315,8 +315,8 @@ class GradioUI:
 
             banner_html=(
                 """
-                <div class="cyber-banner-short bg-purple fg-white cyber-glitch-1">
-                Tannhäuser Gate Approved
+                <div class="cyber-banner-short bg-purple fg-white cyber-glitch-1 scroll-container">
+                <div class="scroll-text">Tannhäuser Gate Approved<div>
                 </div>
                 """
             )
@@ -370,7 +370,7 @@ class GradioUI:
                 [stored_messages, text_input],
             ).then(self.interact_with_agent, [stored_messages, chatbot], [chatbot])
             examples = gr.Examples(
-                examples=[["Tell me a joke based on the current local time"],["Given the current local time, what is a fun activity to do?"],["When asked for the current local time, add 6 hours to it. What is the current local time?"], ["Find significant events that happend exactly one year ago"], ["Generate a bold picture inspired by the current local time"]],
+                examples=[["Tell me a joke based on the current local time"],["Given the current local time, what is a fun activity to do?"],["When asked for the current local time, add 6 hours to it. What is the current local time?"], ["Find significant events that happend exactly one year ago"], ["Compute the current local time glitch coeficients"],["Generate a bold picture inspired by the current local time"]],
             inputs=[text_input],
             )
         
