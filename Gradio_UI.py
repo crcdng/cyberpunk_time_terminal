@@ -287,7 +287,7 @@ class GradioUI:
     def launch(self, **kwargs):
         import gradio as gr
 
-        with gr.Blocks(fill_height=True, theme='crcdng/cyber') as demo:
+        with gr.Blocks(fill_height=True, theme='crcdng/cyber', css='cyberpunk.css') as demo:
             
             title_html=(
                 """
@@ -333,6 +333,7 @@ class GradioUI:
             ),
             resizeable=True,
             scale=2,
+            elem_classes="cyber-glitch-4",
             )
             # If an upload folder is provided, enable the upload feature
             if self.file_upload_folder is not None:
