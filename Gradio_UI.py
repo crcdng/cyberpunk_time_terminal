@@ -315,8 +315,8 @@ class GradioUI:
 
             banner_html=(
                 """
-                <div class="cyber-banner-short bg-purple fg-white cyber-glitch-1">
-                Tannhäuser Gate Approved
+                <div id="scroll-container" class="cyber-banner-short bg-purple fg-white cyber-glitch-1">
+                <span id="scroll-text">Tannhäuser Gate Approved</span>
                 </div>
                 """
             )
@@ -326,7 +326,7 @@ class GradioUI:
             with gr.Row():
                 timer = gr.Timer(1)
                 gr.Textbox(render=False)
-                time_display = gr.Textbox(label="Time", elem_classes="scroll-text")
+                time_display = gr.Textbox(label="Time", elem_classes="cyber-glitch-4")
                 gr.Textbox(render=False)
                 import time
                 timer.tick(lambda: get_current_time_in_timezone(time.tzname[0]), outputs=time_display)
