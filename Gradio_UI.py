@@ -325,7 +325,7 @@ class GradioUI:
                 title=gr.HTML(banner_html) 
             with gr.Row():
                 timer = gr.Timer(1)
-                time_display = gr.Textbox(label="Time",)
+                time_display = gr.Textbox(label="Time", width="50vw")
                 import time
                 timer.tick(lambda: get_current_time_in_timezone(time.tzname[0]), outputs=time_display)
             with gr.Row():
