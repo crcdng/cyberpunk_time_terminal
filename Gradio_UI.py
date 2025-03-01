@@ -315,7 +315,7 @@ class GradioUI:
 
             with gr.Row():
                 timer = gr.Timer(1)
-                time_display = gr.Textbox(label="Time")
+                time_display = gr.Textbox(label="Time", elem_classes="cyber-glitch-4",)
                 import time
                 timer.tick(lambda: get_current_time_in_timezone(time.tzname[0]), outputs=time_display)
             with gr.Row():
@@ -348,7 +348,7 @@ class GradioUI:
                 steps_input.change(self.agent_set_steps, steps_input, None)
                 tools_list = gr.Dropdown(self.agent_get_tools(), interactive=True, label="Tools", info="(display only)")
                 # tools_list.select(self.agent_get_tools, None, tools_list)
-                reset = gr.Button(value="Reset Agent", elem_classes="cyber-glitch-4",)
+                reset = gr.Button(value="Reset Agent",)
                 reset.click(self.agent_reset, None, None)
             text_input = gr.Textbox(lines=1, label="Chat Message")
             text_input.submit(
