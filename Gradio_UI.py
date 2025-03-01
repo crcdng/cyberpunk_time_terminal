@@ -307,7 +307,7 @@ class GradioUI:
 
             description_html=(
                 """
-                <center><p> 
+                <center><p style='font-size: 24px;'> 
                 Welcome to ChronoCore-77, the bleeding-edge time terminal jacked straight into the neon veins of Night City. Whether you're dodging corpos, chasing edgerunner gigs, or just trying to sync your implant clock, I've got the local time locked and loaded. No glitches [OK a few...], no lag—just pure, precise chrono-data ripped straight from the grid. Stay sharp, choom. Time waits for no one.
                 </p></center>
                 """
