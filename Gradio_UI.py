@@ -308,15 +308,15 @@ class GradioUI:
             description_html=(
                 """
                 <center><p> 
-                Welcome to ChronoCore-77, the bleeding-edge time terminal jacked straight into the neon veins of Night City. Whether you're dodging corpos, chasing edgerunner gigs, or just trying to sync your implant clock, I've got the local time locked and loaded. No glitches, no lag—just pure, precise chrono-data ripped straight from the grid. Stay sharp, choom. Time waits for no one.
+                Welcome to ChronoCore-77, the bleeding-edge time terminal jacked straight into the neon veins of Night City. Whether you're dodging corpos, chasing edgerunner gigs, or just trying to sync your implant clock, I've got the local time locked and loaded. No glitches [OK a few...], no lag—just pure, precise chrono-data ripped straight from the grid. Stay sharp, choom. Time waits for no one.
                 </p></center>
                 """
             )
-            
+
             banner_html=(
                 """
-                <div class="cyber-banner">
-                Banner
+                <div class="cyber-banner-short bg-purple fg-white">
+                Tannhäuser Gate Approved
                 </div>
                 """
             )
@@ -343,7 +343,7 @@ class GradioUI:
             ),
             resizeable=True,
             scale=2,
-            elem_classes=".cyber-razor-top .cyber-razor-bottom"
+            elem_classes="cyber-razor-top cyber-razor-bottom"
             )
             # If an upload folder is provided, enable the upload feature
             if self.file_upload_folder is not None:
