@@ -300,7 +300,7 @@ class GradioUI:
                 }
                 </style>
                 <center> 
-                <h1 style='font-family: Cyberpunk; font-size: 38px;'> Your Cyberpunk Local Time Terminal </h1>
+                <h1 style='font-family: Cyberpunk; font-size: 42px;'> Your Cyberpunk Local Time Terminal </h1>
                 </center>
                 """
             )
