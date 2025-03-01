@@ -338,7 +338,7 @@ class GradioUI:
                 description=gr.HTML(description_html)     
             stored_messages = gr.State([])
             file_uploads_log = gr.State([])
-            with gr.Row():
+            with gr.Row(equal_height=True):
                 chatbot = gr.Chatbot(
                 label="Agent",
                 type="messages",
