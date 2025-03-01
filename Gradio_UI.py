@@ -360,7 +360,7 @@ class GradioUI:
                 # tools_list.select(self.agent_get_tools, None, tools_list)
                 reset = gr.Button(value="Reset Agent", )
                 reset.click(self.agent_reset, None, None)
-            text_input = gr.Textbox(lines=1, label="Chat Message", elem_classes="cyber-razor-top cyber-razor-bottom"
+            text_input = gr.Textbox(lines=1, label="Chat Message", elem_classes="cyber-razor-top"
 )
             text_input.submit(
                 self.log_user_message,
