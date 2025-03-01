@@ -348,7 +348,7 @@ class GradioUI:
                 steps_input.change(self.agent_set_steps, steps_input, None)
                 tools_list = gr.Dropdown(self.agent_get_tools(), interactive=True, label="Tools", info="(display only)")
                 # tools_list.select(self.agent_get_tools, None, tools_list)
-                reset = gr.Button(value="Reset Agent",)
+                reset = gr.Button(value="Reset Agent", elem_classes="cyber-button-small")
                 reset.click(self.agent_reset, None, None)
             text_input = gr.Textbox(lines=1, label="Chat Message")
             text_input.submit(
