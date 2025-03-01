@@ -287,7 +287,7 @@ class GradioUI:
     def launch(self, **kwargs):
         import gradio as gr
 
-        with gr.Blocks(fill_height=True, theme='crcdng/cyber', css=".gradio-container {background-color: red}") as demo:
+        with gr.Blocks(fill_height=True, theme='crcdng/cyber', css=".my-container {background-color: red}") as demo:
             
             title_html=(
                 """
@@ -325,7 +325,7 @@ class GradioUI:
                 title=gr.HTML(banner_html) 
             with gr.Row():
                 timer = gr.Timer(1)
-                time_display = gr.Textbox(label="Time", elem_classes="cyber-glitch-2",)
+                time_display = gr.Textbox(label="Time", elem_classes="my-container",)
                 import time
                 timer.tick(lambda: get_current_time_in_timezone(time.tzname[0]), outputs=time_display)
             with gr.Row():
