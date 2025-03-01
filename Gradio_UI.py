@@ -350,7 +350,7 @@ class GradioUI:
                 scale=2,
                 elem_classes="cyber-glitch-1",
                 )
-                gr.Model3D("terminal.glb", label="A view of the ChronoCore-77")
+                gr.Model3D("terminal.glb", display_mode= "wireframe", label="A view of the ChronoCore-77")
             # If an upload folder is provided, enable the upload feature
             if self.file_upload_folder is not None:
                 upload_file = gr.File(label="Upload a file")
@@ -365,7 +365,7 @@ class GradioUI:
                 steps_input.change(self.agent_set_steps, steps_input, None)
                 tools_list = gr.Dropdown(self.agent_get_tools(), interactive=True, label="Tools", info="(display only)")
                 # tools_list.select(self.agent_get_tools, None, tools_list)
-                reset = gr.Button(value="Reset Agent")
+                reset = gr.Button(value="Reset ChronoCore-77")
                 reset.click(self.agent_reset, None, None)
             text_input = gr.Textbox(lines=1, label="Chat Message", elem_classes="cyber-glitch-2", max_length=1000)
             text_input.submit(
