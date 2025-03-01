@@ -315,14 +315,14 @@ class GradioUI:
 
             banner_html=(
                 """
-                <div class="cyber-banner-short bg-purple fg-white cyber-glitch-1 scroll-container">
-                <span class="scroll-text">Tannhäuser Gate Approved<span>
+                <div class="cyber-banner-short bg-purple fg-white cyber-glitch-1">
+                Tannhäuser Gate Approved
                 </div>
                 """
             )
 
             with gr.Row():
-                title=gr.HTML(banner_html) 
+                title=gr.HTML(banner_html, elem_classes="scroll-text") 
             with gr.Row():
                 timer = gr.Timer(1)
                 gr.Textbox(render=False)
