@@ -287,7 +287,7 @@ class GradioUI:
     def launch(self, **kwargs):
         import gradio as gr
 
-        with gr.Blocks(fill_height=True, theme='crcdng/cyber', css="url('/gradio_api/file=cyberpunk.css')") as demo:
+        with gr.Blocks(fill_height=True, theme='crcdng/cyber', css_paths="cyberpunk.css") as demo:
             
             title_html=(
                 """
@@ -313,16 +313,6 @@ class GradioUI:
                 """
             )
 
-            banner_html=(
-                """
-                <div class="cyber-banner">
-                Banner
-                </div>
-                """
-            )
-
-            with gr.Row():
-                title=gr.HTML(banner_html) 
             with gr.Row():
                 timer = gr.Timer(1)
                 time_display = gr.Textbox(label="Time", elem_classes="my-container",)
