@@ -316,7 +316,7 @@ class GradioUI:
             banner_html=(
                 """
                 <div class="cyber-banner-short bg-purple fg-white cyber-glitch-1 scroll-container">
-                <div class="scroll-text">Tannhäuser Gate Approved<div>
+                <span class="scroll-text">Tannhäuser Gate Approved<span>
                 </div>
                 """
             )
