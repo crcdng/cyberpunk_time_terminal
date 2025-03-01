@@ -325,7 +325,7 @@ class GradioUI:
                 title=gr.HTML(banner_html) 
             with gr.Row():
                 timer = gr.Timer(1)
-                time_display = gr.Textbox(label="Time", width="50vw")
+                time_display = gr.Textbox(label="Time", min_width=300)
                 import time
                 timer.tick(lambda: get_current_time_in_timezone(time.tzname[0]), outputs=time_display)
             with gr.Row():
@@ -360,8 +360,7 @@ class GradioUI:
                 # tools_list.select(self.agent_get_tools, None, tools_list)
                 reset = gr.Button(value="Reset Agent", )
                 reset.click(self.agent_reset, None, None)
-            text_input = gr.Textbox(lines=1, label="Chat Message", elem_classes="cyber-glitch-2",
-)
+            text_input = gr.Textbox(lines=1, label="Chat Message", elem_classes="cyber-glitch-2", max_length=1000)
             text_input.submit(
                 self.log_user_message,
                 [text_input, file_uploads_log],
