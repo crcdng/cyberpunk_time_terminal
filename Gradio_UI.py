@@ -315,7 +315,7 @@ class GradioUI:
 
             banner_html=(
                 """
-                <div class="cyber-banner-short bg-purple fg-white">
+                <div class="cyber-banner-short bg-purple fg-white cyber-glitch-1">
                 Tannhäuser Gate Approved
                 </div>
                 """
@@ -343,6 +343,7 @@ class GradioUI:
             ),
             resizeable=True,
             scale=2,
+            elem_classes="cyber-glitch-1",
             )
             # If an upload folder is provided, enable the upload feature
             if self.file_upload_folder is not None:
