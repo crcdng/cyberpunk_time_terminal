@@ -338,17 +338,19 @@ class GradioUI:
                 description=gr.HTML(description_html)     
             stored_messages = gr.State([])
             file_uploads_log = gr.State([])
-            chatbot = gr.Chatbot(
-            label="Agent",
-            type="messages",
-            avatar_images=(
+            with gr.Row():
+                chatbot = gr.Chatbot(
+                label="Agent",
+                type="messages",
+                avatar_images=(
                 "https://huggingface.co/spaces/crcdng/First_agent_template/resolve/main/agent_b.jpg",
                 "https://huggingface.co/spaces/crcdng/First_agent_template/resolve/main/agent_a.jpg",
-            ),
-            resizeable=True,
-            scale=2,
-            elem_classes="cyber-glitch-1",
-            )
+                ),
+                resizeable=True,
+                scale=2,
+                elem_classes="cyber-glitch-1",
+                )
+                gr.Model3D("terminal.glb", label="A view of the ChronoCore-77")
             # If an upload folder is provided, enable the upload feature
             if self.file_upload_folder is not None:
                 upload_file = gr.File(label="Upload a file")
