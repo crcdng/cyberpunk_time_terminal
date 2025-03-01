@@ -287,7 +287,7 @@ class GradioUI:
     def launch(self, **kwargs):
         import gradio as gr
 
-        with gr.Blocks(fill_height=True, theme='crcdng/cyber', css_paths="cyberpunk.css scrolling_text.css") as demo:
+        with gr.Blocks(fill_height=True, theme='crcdng/cyber', css_paths=["cyberpunk.css",  "scrolling_text.css"]) as demo:
             
             title_html=(
                 """
