@@ -312,10 +312,20 @@ class GradioUI:
                 </p></center>
                 """
             )
+            
+            banner_html=(
+                """
+                <div class="cyber-banner">
+                Banner
+                </div>
+                """
+            )
 
             with gr.Row():
+                title=gr.HTML(banner_html) 
+            with gr.Row():
                 timer = gr.Timer(1)
-                time_display = gr.Textbox(label="Time", elem_classes="glitch-3",)
+                time_display = gr.Textbox(label="Time", elem_classes="cyber-glitch-2",)
                 import time
                 timer.tick(lambda: get_current_time_in_timezone(time.tzname[0]), outputs=time_display)
             with gr.Row():
@@ -333,6 +343,7 @@ class GradioUI:
             ),
             resizeable=True,
             scale=2,
+            elem_classes=".cyber-razor-top .cyber-razor-bottom"
             )
             # If an upload folder is provided, enable the upload feature
             if self.file_upload_folder is not None:
@@ -348,7 +359,7 @@ class GradioUI:
                 steps_input.change(self.agent_set_steps, steps_input, None)
                 tools_list = gr.Dropdown(self.agent_get_tools(), interactive=True, label="Tools", info="(display only)")
                 # tools_list.select(self.agent_get_tools, None, tools_list)
-                reset = gr.Button(value="Reset Agent", elem_classes="cyber-button-small")
+                reset = gr.Button(value="Reset Agent", )
                 reset.click(self.agent_reset, None, None)
             text_input = gr.Textbox(lines=1, label="Chat Message")
             text_input.submit(
