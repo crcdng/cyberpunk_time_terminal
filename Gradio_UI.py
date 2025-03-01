@@ -287,7 +287,7 @@ class GradioUI:
     def launch(self, **kwargs):
         import gradio as gr
 
-        with gr.Blocks(fill_height=True, theme='crcdng/cyber', css='cyberpunk.css') as demo:
+        with gr.Blocks(fill_height=True, theme='crcdng/cyber', css=".gradio-container {background-color: red}") as demo:
             
             title_html=(
                 """
