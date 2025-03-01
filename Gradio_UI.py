@@ -325,7 +325,7 @@ class GradioUI:
                 title=gr.HTML(banner_html) 
             with gr.Row():
                 timer = gr.Timer(1)
-                time_display = gr.Textbox(label="Time", elem_classes="cyber-glitch-2",)
+                time_display = gr.Textbox(label="Time",)
                 import time
                 timer.tick(lambda: get_current_time_in_timezone(time.tzname[0]), outputs=time_display)
             with gr.Row():
@@ -353,14 +353,14 @@ class GradioUI:
                     [upload_file, file_uploads_log],
                     [upload_status, file_uploads_log],
                 )
-            with gr.Row():
+            with gr.Row(equal_height=True):
                 steps_input = gr.Slider(1, 12, value=4, step=1, label="Max. Number of Steps")
                 steps_input.change(self.agent_set_steps, steps_input, None)
                 tools_list = gr.Dropdown(self.agent_get_tools(), interactive=True, label="Tools", info="(display only)")
                 # tools_list.select(self.agent_get_tools, None, tools_list)
                 reset = gr.Button(value="Reset Agent", )
                 reset.click(self.agent_reset, None, None)
-            text_input = gr.Textbox(lines=1, label="Chat Message", elem_classes="cyber-razor-top"
+            text_input = gr.Textbox(lines=1, label="Chat Message", elem_classes="cyber-glitch-2",
 )
             text_input.submit(
                 self.log_user_message,
