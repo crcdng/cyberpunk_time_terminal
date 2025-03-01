@@ -315,7 +315,7 @@ class GradioUI:
 
             with gr.Row():
                 timer = gr.Timer(1)
-                time_display = gr.Textbox(label="Time", elem_classes="my-container",)
+                time_display = gr.Textbox(label="Time", elem_classes="glitch-3",)
                 import time
                 timer.tick(lambda: get_current_time_in_timezone(time.tzname[0]), outputs=time_display)
             with gr.Row():
