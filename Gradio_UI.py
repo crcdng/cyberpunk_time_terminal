@@ -359,7 +359,7 @@ class GradioUI:
             banner_html = """
                 <div class="cyber-banner-short bg-purple fg-white cyber-glitch-1">
                 <div style="margin-left: auto; width: 80%;" id="scroll-container">
-                <div id="scroll-text"> ---- Tannhäuser Gate Approved ---- Special Offer Today Only ----- Free Access Credits </div>
+                <div style="color: *primary_100" id="scroll-text"> ---- Tannhäuser Gate Approved ---- Special Offer Today Only ----- Free Access Credits </div>
                 </div>
                 </div>
                 """
@@ -398,7 +398,7 @@ class GradioUI:
                 gr.Model3D(
                     "terminal.glb",
                     display_mode="solid",
-                    camera_position=(90, 180, 2),
+                    camera_position=(90, 180, 1.7),
                     label="A view of the ChronoCore-77",
                 )
             # If an upload folder is provided, enable the upload feature
