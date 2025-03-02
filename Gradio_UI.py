@@ -359,7 +359,7 @@ class GradioUI:
             banner_html = """
                 <div class="cyber-banner-short bg-purple fg-white cyber-glitch-1">
                 <div style="margin-left: auto; width: 80%;" id="scroll-container">
-                <div style="color: *primary_100" id="scroll-text"> ---- Tannhäuser Gate Approved ---- Special Offer Today Only ----- Free Access Credits </div>
+                <div style="color: #00FFD2" id="scroll-text"> ---- Tannhäuser Gate Approved ---- Special Offer Today Only ----- Free Access Credits </div>
                 </div>
                 </div>
                 """
