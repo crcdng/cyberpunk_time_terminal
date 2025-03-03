@@ -318,7 +318,7 @@ class GradioUI:
         )
 
     def agent_get_tools(self):
-        return self.agent.tools
+        return self.agent.tools.keys()
 
     def agent_get_steps(self):
         return self.agent.max_steps
