@@ -420,7 +420,7 @@ class GradioUI:
                     1, 12, value=self.agent_get_steps(), step=1, label="Max. Number of Steps"
                 )
                 steps_input.change(self.agent_set_steps, steps_input, None)
-                selected = elf.agent_get_tools()
+                selected = self.agent_get_tools()
                 tools_list = gr.Dropdown(
                     choices=selected, 
                     value=selected,
