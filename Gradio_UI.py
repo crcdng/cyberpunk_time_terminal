@@ -423,6 +423,7 @@ class GradioUI:
                 tools_list = gr.Dropdown(
                     self.agent_get_tools(),
                     interactive=True,
+                    multiselect=True,
                     label="Tools",
                     info="(display only)",
                 )
