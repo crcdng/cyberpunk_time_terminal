@@ -421,8 +421,8 @@ class GradioUI:
                 )
                 steps_input.change(self.agent_set_steps, steps_input, None)
                 tools_list = gr.Dropdown(
-                    choices=["a", "b", "c"], # self.agent_get_tools()
-                    value=["a", "b", "c"],
+                    choices=self.agent_get_tools(), 
+                    value=self.agent_get_tools,
                     interactive=True,
                     multiselect=True,
                     label="Tools",
