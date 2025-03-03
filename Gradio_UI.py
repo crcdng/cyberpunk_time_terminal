@@ -320,6 +320,9 @@ class GradioUI:
     def agent_get_tools(self):
         return self.agent.tools
 
+    def agent_get_steps(self):
+        return self.agent.max_steps
+
     def agent_reset(self):
         self.agent.memory.reset()
         self.agent.monitor.reset()
@@ -414,7 +417,7 @@ class GradioUI:
                 )
             with gr.Row(equal_height=True):
                 steps_input = gr.Slider(
-                    1, 12, value=4, step=1, label="Max. Number of Steps"
+                    1, 12, value=self.agent_get_steps(), step=1, label="Max. Number of Steps"
                 )
                 steps_input.change(self.agent_set_steps, steps_input, None)
                 tools_list = gr.Dropdown(

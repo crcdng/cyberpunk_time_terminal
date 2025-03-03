@@ -18,7 +18,9 @@ tags:
 
 # Your Cyberpunk Local Time Terminal
  
-derived from: First Agent Template    
+derived from: First Agent Template
+
 uses the [cyber theme](https://huggingface.co/spaces/crcdng/cyber)
 and [cyberpunk.css](https://www.cssscript.com/demo/cyberpunk-2077/) Copyright (c) 2025 github/alddesign (MIT License)
+
 [3D model](https://rigmodels.com/model.php?view=Retro_Sci-Fi_Holocomputer-3d-model__eb9917b8e8904bc48420216db09eef46) free license
