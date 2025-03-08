@@ -247,13 +247,16 @@ class GradioUI:
     def interact_with_agent(self, prompt, messages):
         import gradio as gr
 
-        messages.append(gr.ChatMessage(role="user", content=prompt))
-        yield messages
-        for msg in stream_to_gradio(self.agent, task=prompt, reset_agent_memory=False):
-            messages.append(msg)
+        try: 
+            messages.append(gr.ChatMessage(role="user", content=prompt))
             yield messages
-        yield messages
-
+            for msg in stream_to_gradio(self.agent, task=prompt, reset_agent_memory=False):
+                messages.append(msg)
+                yield messages
+            yield messages   
+        except:
+            raise gr.Error("Due to the high demand for Your Cyberpunk Local Time Terminal, the space has run out of computing credits. The technician is notified. Please try again later. Thank you for your patience. You can sponsor the project at github.com/sponsors/crcdng")
+            
     def upload_file(
         self,
         file,
