@@ -17,7 +17,9 @@ tags:
 ---
 
 # Your Cyberpunk Local Time Terminal
- 
+
+live at: https://huggingface.co/spaces/crcdng/cyberpunk_time_terminal 
+
 derived from: First Agent Template
 
 uses the [cyber theme](https://huggingface.co/spaces/crcdng/cyber)
