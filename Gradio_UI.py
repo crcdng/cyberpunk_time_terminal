@@ -255,8 +255,8 @@ class GradioUI:
                 yield messages
             yield messages   
         except:
-            raise gr.Error("Due to the high demand for Your Cyberpunk Local Time Terminal, the space has run out of computing credits. The technician is notified. Please try again later. Thank you for your patience. You can sponsor the project at github.com/sponsors/crcdng")
-            
+            raise gr.Error("Due to the high demand for Your Cyberpunk Local Time Terminal, the space has run out of computing credits. The technician has been notified. Please try again later. You can sponsor the project at github.com/sponsors/crcdng. Thank you for your patience.")
+
     def upload_file(
         self,
         file,
