@@ -20,6 +20,9 @@ tags:
 
 live at: https://huggingface.co/spaces/crcdng/cyberpunk_time_terminal 
 
+the repo is mirrored at https://github.com/crcdng/cyberpunk_time_terminal     
+where you can sponsor it 🤑🙏🤗 (e.g. Huggingface credits) https://github.com/sponsors/crcdng 
+
 derived from: First Agent Template
 
 uses the [cyber theme](https://huggingface.co/spaces/crcdng/cyber)
