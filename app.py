@@ -54,4 +54,4 @@ agent = CodeAgent(
     prompt_templates=prompt_templates,
 )
 
-GradioUI(agent).launch()
+GradioUI(agent).launch(mcp_server=True)
